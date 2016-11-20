@@ -46,7 +46,7 @@ a;b;c
 Stores the values a, b and c in the XML-Blacklist file.
 
 ## One image from the generator:
-![Image from the generator](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Image from the generator")
+![Image from the generator](https://github.com/SeppPenner/WordCloudGenerator/blob/master/ExampleImage.png "Image from the generator")
 
 The project is licensed under the "I don't care what you do with this sh*t"-license
 
@@ -55,7 +55,7 @@ Thanks go to George Mamaladze from http://sourcecodecloud.codeplex.com/ for the 
 Change history
 --------------
 
-* **Version 1.0.0 (2016-07-13)** : 1.0 release.
+* **Version 1.0.0.0 (2016-11-20)** : 1.0 release.
 
 
 
