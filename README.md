@@ -43,10 +43,16 @@ IFileBlackListLocation IFileBlackListLocation --> See basic usage
 ## Structure of the blacklists in the table:
 a;b;c
 
+![The dialog for changing blacklists](https://github.com/SeppPenner/WordCloudGenerator/blob/master/ExampleImageBlacklist.png "The dialog for changing blacklists")
+
+
 Stores the values a, b and c in the XML-Blacklist file.
 
 ## One image from the generator:
 ![Image from the generator](https://github.com/SeppPenner/WordCloudGenerator/blob/master/ExampleImage.png "Image from the generator")
+
+## Screenshot from the executable:
+![Screenshot from the executable](https://github.com/SeppPenner/WordCloudGenerator/blob/master/ExampleImageSoftware.png "Screenshot from the executable")
 
 The project is licensed under the "I don't care what you do with this sh*t"-license
 
