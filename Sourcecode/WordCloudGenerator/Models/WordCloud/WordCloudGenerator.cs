@@ -86,7 +86,9 @@ namespace Models.WordCloud
             var filesList = files as IList<string> ?? files.ToList();
             var saveImageLocation = FileBlackListLocation.SaveImageLocation;
             var groupedWords = GetGroupedFilesIgnoreCase(filesList).ToList();
-            var filteredWords = FileBlackListLocation.Blacklist != null ? FilterFromFilterListIgnoreCase(groupedWords, FileBlackListLocation.Blacklist) : groupedWords;
+            var filteredWords = FileBlackListLocation.Blacklist != null
+                ? FilterFromFilterListIgnoreCase(groupedWords, FileBlackListLocation.Blacklist)
+                : groupedWords;
             var orderedWords = new Orderer().Order(filteredWords);
             Paint(orderedWords, saveImageLocation);
         }
@@ -98,7 +100,9 @@ namespace Models.WordCloud
             var filesList = files as IList<string> ?? files.ToList();
             var saveImageLocation = FileBlackListLocation.SaveImageLocation;
             var groupedWords = GetGroupedFiles(filesList).ToList();
-            var filteredWords = FileBlackListLocation.Blacklist != null ? FilterFromFilterList(groupedWords, FileBlackListLocation.Blacklist) : groupedWords;
+            var filteredWords = FileBlackListLocation.Blacklist != null
+                ? FilterFromFilterList(groupedWords, FileBlackListLocation.Blacklist)
+                : groupedWords;
             var orderedWords = new Orderer().Order(filteredWords);
             Paint(orderedWords, saveImageLocation);
         }

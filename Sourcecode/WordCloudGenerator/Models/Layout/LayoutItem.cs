@@ -19,7 +19,7 @@ namespace Models.Layout
         public RectangleF Rectangle { get; set; }
         public IWord Word { get; set; }
 
-        public LayoutItem Clone()
+        public ILayoutItem Clone()
         {
             return new LayoutItem(Rectangle, Word);
         }

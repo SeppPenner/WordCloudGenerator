@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D4F50533-B18A-46ED-AC7E-C4CF47787CE5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>
+    </RootNamespace>
+    <AssemblyName>WordCloudGenerator</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Words.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Languages, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Languages.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlacklistDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BlacklistDialog.Designer.cs">
+      <DependentUpon>BlacklistDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExampleUsage.cs" />
+    <Compile Include="Interfaces\FileOperations\IFileListFactory.cs" />
+    <Compile Include="Interfaces\FileOperations\IFileReader.cs" />
+    <Compile Include="Interfaces\Graphical\IGraphicEngine.cs" />
+    <Compile Include="Interfaces\Layout\ILayout.cs" />
+    <Compile Include="Interfaces\Layout\ILayoutFactory.cs" />
+    <Compile Include="Interfaces\Layout\ILayoutItem.cs" />
+    <Compile Include="Interfaces\ImportExport\IImportExport.cs" />
+    <Compile Include="Interfaces\TextOperations\IOrderer.cs" />
+    <Compile Include="Interfaces\TextOperations\ITextFilter.cs" />
+    <Compile Include="Interfaces\TextOperations\IUpperFirst.cs" />
+    <Compile Include="Interfaces\TransferObjects\IMinMax.cs" />
+    <Compile Include="Interfaces\WordCloud\IWord.cs" />
+    <Compile Include="Interfaces\WordCloud\IWordCloudGenerator.cs" />
+    <Compile Include="Interfaces\TransferObjects\IFileBlackListLocation.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Enumerations\LayoutType.cs" />
+    <Compile Include="Models\ImportExport\Blacklist.cs" />
+    <Compile Include="Models\ImportExport\BlacklistItem.cs" />
+    <Compile Include="Models\ImportExport\BlacklistModel.cs" />
+    <Compile Include="Models\Enumerations\StringCompareType.cs" />
+    <Compile Include="Models\FileOperations\FileListFactory.cs" />
+    <Compile Include="Models\FileOperations\FileReader.cs" />
+    <Compile Include="Models\Layout\BaseLayout.cs" />
+    <Compile Include="Models\Graphical\GdiGraphicEngine.cs" />
+    <Compile Include="Models\Layout\LayoutFactory.cs" />
+    <Compile Include="Models\Layout\LayoutItem.cs" />
+    <Compile Include="Models\Graphical\QuadTree.cs" />
+    <Compile Include="Models\Graphical\QuadTreeNode.cs" />
+    <Compile Include="Models\Layout\SpiralLayout.cs" />
+    <Compile Include="Models\ImportExport\ImportExport.cs" />
+    <Compile Include="Models\Layout\TypewriterLayout.cs" />
+    <Compile Include="Models\TextOperations\Orderer.cs" />
+    <Compile Include="Models\TextOperations\TextFilter.cs" />
+    <Compile Include="Models\TextOperations\UpperFirst.cs" />
+    <Compile Include="Models\TransferObjects\FileBlackListLocation.cs" />
+    <Compile Include="Models\TransferObjects\MinMax.cs" />
+    <Compile Include="Models\UIThreadInvoke\UiThreadInvokeExtension.cs" />
+    <Compile Include="Models\WordCloud\Word.cs" />
+    <Compile Include="Models\WordCloud\WordCloudGenerator.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BlacklistDialog.resx">
+      <DependentUpon>BlacklistDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Words.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -15,7 +15,7 @@ namespace Models.Layout
         {
             Surface = new RectangleF(new PointF(0, 0), size);
             QuadTree = new QuadTree<LayoutItem>(Surface);
-            Center = new PointF(Surface.X + size.Width/2, Surface.Y + size.Height/2);
+            Center = new PointF(Surface.X + size.Width / 2, Surface.Y + size.Height / 2);
         }
 
         public PointF Center { get; set; }
@@ -26,23 +26,18 @@ namespace Models.Layout
         public int Arrange(IEnumerable<IWord> words, IGraphicEngine graphicEngine)
         {
             if (words == null)
-            {
                 throw new ArgumentNullException(nameof(words));
-            }
 
-            if (words.First() == null)
-            {
+            var enumerable = words as IWord[] ?? words.ToArray();
+            if (enumerable.First() == null)
                 return 0;
-            }
 
-            foreach (var word in words)
+            foreach (var word in enumerable)
             {
                 var size = graphicEngine.Measure(word.Text, word.Occurrences);
                 RectangleF freeRectangle;
                 if (!TryFindFreeRectangle(size, out freeRectangle))
-                {
                     break;
-                }
                 var item = new LayoutItem(freeRectangle, word);
                 QuadTree.Insert(item);
                 graphicEngine.Draw(item);

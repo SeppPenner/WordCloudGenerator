@@ -1,6 +1,5 @@
 ﻿using System.Drawing;
 using Interfaces.WordCloud;
-using Models.Layout;
 
 namespace Interfaces.Layout
 {
@@ -9,6 +8,6 @@ namespace Interfaces.Layout
         RectangleF Rectangle { get; set; }
         IWord Word { get; set; }
 
-        LayoutItem Clone();
+        ILayoutItem Clone();
     }
 }
