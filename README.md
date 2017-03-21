@@ -64,6 +64,7 @@ Thanks go to George Mamaladze from http://sourcecodecloud.codeplex.com/ for the 
 Change history
 --------------
 
+* **Version 1.0.0.3 (2017-03-21)** : Updated Languages.dll.
 * **Version 1.0.0.2 (2017-02-24)** : Adjusted code and added languages.dll.
 * **Version 1.0.0.1 (2016-11-21)** : Added try-catchs to user inputs.
 * **Version 1.0.0.0 (2016-11-20)** : 1.0 release.
