@@ -15,12 +15,8 @@ namespace Models.TextOperations
             var wordList2 = AllToUpper(wordList).ToList();
 
             for (var i = 0; i < wordList2.ToList().Count; i++)
-            {
                 if (filterList2.Contains(wordList2.ElementAt(i).Text))
-                {
                     wordList2.RemoveAt(i);
-                }
-            }
             return wordList2;
         }
 
@@ -30,12 +26,8 @@ namespace Models.TextOperations
             var wordList2 = wordList.ToList();
 
             for (var i = 0; i < wordList2.ToList().Count; i++)
-            {
                 if (filterList2.Contains(wordList2.ElementAt(i).Text))
-                {
                     wordList2.RemoveAt(i);
-                }
-            }
             return wordList2;
         }
 
@@ -43,9 +35,7 @@ namespace Models.TextOperations
         {
             var wordList2 = wordList.ToList();
             for (var i = 0; i < wordList2.Count; i++)
-            {
                 wordList2[i] = new Word(wordList2[i].Text.ToUpper(), wordList2[i].Occurrences);
-            }
             return wordList2;
         }
     }

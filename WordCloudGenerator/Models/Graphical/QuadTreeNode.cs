@@ -69,10 +69,8 @@ namespace Models.Graphical
         public IEnumerable<T> Query(RectangleF queryArea)
         {
             foreach (var item in Contents)
-            {
                 if (queryArea.IntersectsWith(item.Rectangle))
                     yield return item;
-            }
 
             foreach (var node in _mNodes)
             {
@@ -84,9 +82,7 @@ namespace Models.Graphical
                 {
                     var subResults = node.Query(queryArea);
                     foreach (var subResult in subResults)
-                    {
                         yield return subResult;
-                    }
                     break;
                 }
 
@@ -94,9 +90,7 @@ namespace Models.Graphical
                 {
                     var subResults = node.SubTreeContents;
                     foreach (var subResult in subResults)
-                    {
                         yield return subResult;
-                    }
                     continue;
                 }
 
@@ -104,9 +98,7 @@ namespace Models.Graphical
                 {
                     var subResults = node.Query(queryArea);
                     foreach (var subResult in subResults)
-                    {
                         yield return subResult;
-                    }
                 }
             }
         }
@@ -142,11 +134,11 @@ namespace Models.Graphical
 
         private void CreateSubNodes()
         {
-            if (_mBounds.Height*_mBounds.Width <= 10)
+            if (_mBounds.Height * _mBounds.Width <= 10)
                 return;
 
-            var halfWidth = _mBounds.Width/2f;
-            var halfHeight = _mBounds.Height/2f;
+            var halfWidth = _mBounds.Width / 2f;
+            var halfHeight = _mBounds.Height / 2f;
 
             _mNodes = new QuadTreeNode<T>[4];
             _mNodes[0] = new QuadTreeNode<T>(new RectangleF(_mBounds.Location, new SizeF(halfWidth, halfHeight)));

@@ -25,12 +25,10 @@ namespace Models.FileOperations
         {
             var completeWordList = new List<string>();
             foreach (var file in files)
-            {
                 completeWordList.AddRange(File.ReadAllText(file)
                     .Replace(Environment.NewLine, " ")
                     .Split(' ', ',', '.', '!', ':')
                     .ToList());
-            }
             return completeWordList.Where(s => !string.IsNullOrWhiteSpace(s))
                 .GroupBy(c => c)
                 .Select(g => new Word {Text = g.Key, Occurrences = g.Count()});
@@ -52,13 +50,11 @@ namespace Models.FileOperations
         {
             var completeWordList = new List<string>();
             foreach (var file in files)
-            {
                 completeWordList.AddRange(File.ReadAllText(file)
                     .ToUpper()
                     .Replace(Environment.NewLine, " ")
                     .Split(' ', ',', '.', '!', ':')
                     .ToList());
-            }
             return completeWordList.Where(s => !string.IsNullOrWhiteSpace(s))
                 .GroupBy(c => c)
                 .Select(g => new Word {Text = g.Key, Occurrences = g.Count()});

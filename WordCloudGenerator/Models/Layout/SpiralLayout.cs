@@ -14,27 +14,23 @@ namespace Models.Layout
         {
             foundRectangle = RectangleF.Empty;
             double alpha = GetPseudoRandomStartAngle(size);
-            const double stepAlpha = Math.PI/60;
+            const double stepAlpha = Math.PI / 60;
             const double pointsOnSpital = 500;
 
             Math.Min(Center.Y, Center.X);
             for (var pointIndex = 0; pointIndex < pointsOnSpital; pointIndex++)
             {
-                var dX = pointIndex/pointsOnSpital*Math.Sin(alpha)*Center.X;
-                var dY = pointIndex/pointsOnSpital*Math.Cos(alpha)*Center.Y;
-                foundRectangle = new RectangleF((float) (Center.X + dX) - size.Width/2,
-                    (float) (Center.Y + dY) - size.Height/2, size.Width, size.Height);
+                var dX = pointIndex / pointsOnSpital * Math.Sin(alpha) * Center.X;
+                var dY = pointIndex / pointsOnSpital * Math.Cos(alpha) * Center.Y;
+                foundRectangle = new RectangleF((float) (Center.X + dX) - size.Width / 2,
+                    (float) (Center.Y + dY) - size.Height / 2, size.Width, size.Height);
 
                 alpha += stepAlpha;
                 if (!IsInsideSurface(foundRectangle))
-                {
                     return false;
-                }
 
                 if (!QuadTree.HasContent(foundRectangle))
-                {
                     return true;
-                }
             }
 
             return false;
@@ -42,7 +38,7 @@ namespace Models.Layout
 
         private static float GetPseudoRandomStartAngle(SizeF size)
         {
-            return size.Height*size.Width;
+            return size.Height * size.Width;
         }
     }
 }

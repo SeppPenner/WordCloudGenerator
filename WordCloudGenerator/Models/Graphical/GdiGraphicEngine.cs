@@ -55,25 +55,23 @@ namespace Models.Graphical
             var color = GetPresudoRandomColorFromPalette(layoutItem);
             var point = new Point((int) layoutItem.Rectangle.X, (int) layoutItem.Rectangle.Y);
             _mGraphics.DrawString(layoutItem.Word.Text, font, new SolidBrush(Color.LightGray), point.X, point.Y);
-            var offset = (int) (5*font.Size/MaxFontSize) + 1;
+            var offset = (int) (5 * font.Size / MaxFontSize) + 1;
             point.Offset(-offset, -offset);
             _mGraphics.DrawString(layoutItem.Word.Text, font, new SolidBrush(color), point.X, point.Y);
         }
 
         private Font GetFont(int weight)
         {
-            var fontSize = (float) (weight - _minWordWeight)/(_maxWordWeight - _minWordWeight)*
+            var fontSize = (float) (weight - _minWordWeight) / (_maxWordWeight - _minWordWeight) *
                            (MaxFontSize - MinFontSize) + MinFontSize;
             if (Math.Abs(_lastUsedFont.Size - fontSize) > 0.0000000000001)
-            {
                 _lastUsedFont = new Font(FontFamily, fontSize, FontStyle);
-            }
             return _lastUsedFont;
         }
 
         private Color GetPresudoRandomColorFromPalette(ILayoutItem layoutItem)
         {
-            var color = Palette[layoutItem.Word.Occurrences*layoutItem.Word.Text.Length%Palette.Length];
+            var color = Palette[layoutItem.Word.Occurrences * layoutItem.Word.Text.Length % Palette.Length];
             return color;
         }
     }

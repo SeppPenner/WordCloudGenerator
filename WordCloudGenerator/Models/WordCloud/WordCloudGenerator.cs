@@ -113,7 +113,7 @@ namespace Models.WordCloud
             var toDraw = wordsToDraw as IList<IWord> ?? wordsToDraw.ToList();
             var minMax = CaclulateMinMaxWordWeights(toDraw);
             var bitmap = new Bitmap(Size.Width, Size.Height);
-            bitmap.SetResolution(Convert.ToInt32(Size.Width/6), Convert.ToInt32(Size.Height/6));
+            bitmap.SetResolution(Convert.ToInt32(Size.Width / 6), Convert.ToInt32(Size.Height / 6));
             var graphics = Graphics.FromImage(bitmap);
             graphics.Clear(GetRandomBackgroundColor());
             var graphicEngine = new GdiGraphicEngine(graphics, FontFamily, FontStyle,
@@ -126,18 +126,12 @@ namespace Models.WordCloud
         {
             var extension = Path.GetExtension(saveImageLocation);
             if (extension != null && extension.Equals(".png"))
-            {
                 bitmap.Save(saveImageLocation, ImageFormat.Png);
-            }
             else if (extension != null && extension.Equals(".bmp"))
-            {
                 bitmap.Save(saveImageLocation, ImageFormat.Bmp);
-            }
-            else if ((extension != null && extension.Equals(".jpeg")) ||
-                     (extension != null && extension.Equals(".jpg")))
-            {
+            else if (extension != null && extension.Equals(".jpeg") ||
+                     extension != null && extension.Equals(".jpg"))
                 bitmap.Save(saveImageLocation, ImageFormat.Jpeg);
-            }
         }
 
         private Color GetRandomBackgroundColor()

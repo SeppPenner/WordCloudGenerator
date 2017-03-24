@@ -43,9 +43,7 @@ namespace Models.Graphical
         {
             var returnItems = new List<ILayoutItem>();
             foreach (var s in _mRoot.SubTreeContents)
-            {
                 returnItems.Add(new LayoutItem {Word = s.Word, Rectangle = s.Rectangle});
-            }
             return returnItems;
         }
     }

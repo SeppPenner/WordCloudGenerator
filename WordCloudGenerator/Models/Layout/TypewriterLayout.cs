@@ -19,9 +19,7 @@ namespace Models.Layout
             {
                 foundRectangle = LineFeed(foundRectangle);
                 if (!IsInsideSurface(foundRectangle))
-                {
                     return false;
-                }
             }
             _carret = new PointF(foundRectangle.Right, foundRectangle.Y);
 
