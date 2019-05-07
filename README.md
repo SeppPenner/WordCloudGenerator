@@ -1,8 +1,13 @@
 # WordCloudGenerator
 WordCloudGenerator implementation in C#.
-The executable was written and tested in .Net 4.7.
+The executable was written and tested in .Net 4.8.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/r8r6j98kri947g09?svg=true)](https://ci.appveyor.com/project/SeppPenner/wordcloudgenerator)
+[![GitHub issues](https://img.shields.io/github/issues/SeppPenner/WordCloudGenerator.svg)](https://github.com/SeppPenner/WordCloudGenerator/issues)
+[![GitHub forks](https://img.shields.io/github/forks/SeppPenner/WordCloudGenerator.svg)](https://github.com/SeppPenner/WordCloudGenerator/network)
+[![GitHub stars](https://img.shields.io/github/stars/SeppPenner/WordCloudGenerator.svg)](https://github.com/SeppPenner/WordCloudGenerator/stargazers)
+[![GitHub license](https://img.shields.io/badge/license-AGPL-blue.svg)](https://raw.githubusercontent.com/SeppPenner/WordCloudGenerator/master/License.txt)
+[![Known Vulnerabilities](https://snyk.io/test/github/SeppPenner/WordCloudGenerator/badge.svg)](https://snyk.io/test/github/SeppPenner/WordCloudGenerator)
 
 ## Basic usage:
 ```csharp
@@ -64,6 +69,7 @@ Thanks go to George Mamaladze from http://sourcecodecloud.codeplex.com/ for the 
 Change history
 --------------
 
+* **Version 1.0.0.5 (2019-05-07)** : Updated .Net version to 4.8.
 * **Version 1.0.0.4 (2017-03-24)** : Updated Languages.dll to version 1.0.0.4.
 * **Version 1.0.0.3 (2017-03-21)** : Updated Languages.dll.
 * **Version 1.0.0.2 (2017-02-24)** : Adjusted code and added languages.dll.

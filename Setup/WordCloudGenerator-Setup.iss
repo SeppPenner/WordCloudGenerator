@@ -2,11 +2,11 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "WordCloudGenerator"
-#define MyAppVersion "1.0.0.4"
+#define MyAppVersion "1.0.0.5"
 #define MyAppPublisher "Hämmer Electronics"
 #define MyAppURL "www.softwareload24.de.tl"
 #define MyAppExeName "WordCloudGenerator.exe"
-#define MyPath "F:\TODO\C# und VB\WordCloudGenerator"
+#define MyPath "C:\Users\tim\Desktop\Updaten_Snyk\WordCloudGenerator"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
