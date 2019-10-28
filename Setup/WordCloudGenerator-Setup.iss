@@ -2,11 +2,11 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "WordCloudGenerator"
-#define MyAppVersion "1.0.0.5"
+#define MyAppVersion "1.0.1.0"
 #define MyAppPublisher "Hämmer Electronics"
 #define MyAppURL "www.softwareload24.de.tl"
 #define MyAppExeName "WordCloudGenerator.exe"
-#define MyPath "C:\Users\tim\Desktop\Updaten_Snyk\WordCloudGenerator"
+#define MyPath "C:\Users\Tim\Documents\Git\C# und VB\WordCloudGenerator"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
@@ -23,10 +23,10 @@ AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
-DefaultDirName={pf}\{#MyAppName}
+DefaultDirName={commonpf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
-LicenseFile={#MyPath}\WordCloudGenerator\bin\Debug\License.txt
+LicenseFile={#MyPath}\WordCloudGenerator\bin\Release\License.txt
 OutputDir={#MyPath}\Setup
 OutputBaseFilename=WordCloudGenerator-Setup
 SetupIconFile={#MyPath}\WordCloudGenerator\Words.ico
@@ -42,10 +42,10 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 0,6.1
 
 [Files]
-Source: "{#MyPath}\WordCloudGenerator\bin\Debug\WordCloudGenerator.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#MyPath}\WordCloudGenerator\bin\Debug\Languages.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#MyPath}\WordCloudGenerator\bin\Debug\License.txt"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#MyPath}\WordCloudGenerator\bin\Debug\languages\*"; DestDir: "{app}\languages\"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MyPath}\WordCloudGenerator\bin\Release\WordCloudGenerator.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyPath}\WordCloudGenerator\bin\Release\Languages.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyPath}\WordCloudGenerator\bin\Release\License.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyPath}\WordCloudGenerator\bin\Release\languages\*"; DestDir: "{app}\languages\"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
