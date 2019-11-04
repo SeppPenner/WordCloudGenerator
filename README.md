@@ -6,7 +6,7 @@ The executable was written and tested in .Net 4.8.
 [![GitHub issues](https://img.shields.io/github/issues/SeppPenner/WordCloudGenerator.svg)](https://github.com/SeppPenner/WordCloudGenerator/issues)
 [![GitHub forks](https://img.shields.io/github/forks/SeppPenner/WordCloudGenerator.svg)](https://github.com/SeppPenner/WordCloudGenerator/network)
 [![GitHub stars](https://img.shields.io/github/stars/SeppPenner/WordCloudGenerator.svg)](https://github.com/SeppPenner/WordCloudGenerator/stargazers)
-[![GitHub license](https://img.shields.io/badge/license-AGPL-blue.svg)](https://raw.githubusercontent.com/SeppPenner/WordCloudGenerator/master/License.txt)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://raw.githubusercontent.com/SeppPenner/WordCloudGenerator/master/License.txt)
 [![Known Vulnerabilities](https://snyk.io/test/github/SeppPenner/WordCloudGenerator/badge.svg)](https://snyk.io/test/github/SeppPenner/WordCloudGenerator)
 
 ## Basic usage:
