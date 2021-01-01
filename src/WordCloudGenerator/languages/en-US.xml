@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Language xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Identifier>en-US</Identifier>
+  <!--According to https://msdn.microsoft.com/de-de/library/ee825488(v=cs.20).aspx-->
+  <Name>English (US)</Name>
+  <Words>
+    <Word>
+      <Key>ChooseFile</Key>
+      <Value>Choose file</Value>
+    </Word>
+    <Word>
+      <Key>GenerateWordCloud</Key>
+      <Value>Generate word cloud</Value>
+    </Word>
+    <Word>
+      <Key>SaveFileUnder</Key>
+      <Value>Save file under</Value>
+    </Word>
+    <Word>
+      <Key>Blacklist</Key>
+      <Value>Blacklist:</Value>
+    </Word>
+    <Word>
+      <Key>DefineBlacklists</Key>
+      <Value>Define blacklists</Value>
+    </Word>
+    <Word>
+      <Key>SaveBlacklists</Key>
+      <Value>Save blacklists</Value>
+    </Word>
+    <Word>
+      <Key>BlacklistTitle</Key>
+      <Value>Blacklists</Value>
+    </Word>
+    <Word>
+      <Key>BlacklistSavedCaption</Key>
+      <Value>Blacklist(s) saved successfully</Value>
+    </Word>
+    <Word>
+      <Key>BlacklistSavedTest</Key>
+      <Value>Blacklist(s) were saved successfully.</Value>
+    </Word>
+    <Word>
+      <Key>FilterAllFiles</Key>
+      <Value>All files|*.*</Value>
+    </Word>
+    <Word>
+      <Key>FilterImageFiles</Key>
+      <Value>All files|*.png;*.Bmp;*.Jpg;*.Jpeg|Png|*.png|Bitmap|*.bmp|Jpg|*.jpg|Jpeg|*.jpeg</Value>
+    </Word>
+    <Word>
+      <Key>NoFileSelectedCaption</Key>
+      <Value>No file(s) selected</Value>
+    </Word>
+    <Word>
+      <Key>NoFileSelectedText</Key>
+      <Value>No file(s) were selected.</Value>
+    </Word>
+    <Word>
+      <Key>NoImageSelectedCaption</Key>
+      <Value>No storage location selected for the image</Value>
+    </Word>
+    <Word>
+      <Key>NoImageSelectedText</Key>
+      <Value>No storage location was selected for the image.</Value>
+    </Word>
+    <Word>
+      <Key>WordCloudGeneratedCaption</Key>
+      <Value>Word cloud created</Value>
+    </Word>
+    <Word>
+      <Key>WordCloudGeneratedText</Key>
+      <Value>Word cloud was created successfully.</Value>
+    </Word>
+  </Words>
+</Language>
