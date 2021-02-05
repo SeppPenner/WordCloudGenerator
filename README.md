@@ -9,7 +9,7 @@ The executable was written and tested in .Net 5.0.
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://raw.githubusercontent.com/SeppPenner/WordCloudGenerator/master/License.txt)
 [![Known Vulnerabilities](https://snyk.io/test/github/SeppPenner/WordCloudGenerator/badge.svg)](https://snyk.io/test/github/SeppPenner/WordCloudGenerator)
 
-## Basic usage:
+## Basic usage
 ```csharp
 IFileBlackListLocation fileAndBlackList = new FileBlackListLocation
 {
@@ -48,7 +48,7 @@ LayoutType LayoutType // The LayoutType can be set. Default is LayoutType.Spiral
 IFileBlackListLocation IFileBlackListLocation --> See basic usage
 ```
 
-## Structure of the blacklists in the table:
+## Structure of the blacklists in the table
 a;b;c
 
 ![The dialog for changing blacklists](https://github.com/SeppPenner/WordCloudGenerator/blob/master/ExampleImageBlacklist.png "The dialog for changing blacklists")
@@ -56,10 +56,10 @@ a;b;c
 
 Stores the values a, b and c in the XML-Blacklist file.
 
-## One image from the generator:
+## One image from the generator
 ![Image from the generator](https://github.com/SeppPenner/WordCloudGenerator/blob/master/ExampleImage.png "Image from the generator")
 
-## Screenshot from the executable:
+## Screenshot from the executable
 ![Screenshot from the executable](https://github.com/SeppPenner/WordCloudGenerator/blob/master/ExampleImageSoftware.png "Screenshot from the executable")
 
 The project is licensed under the "I don't care what you do with this sh*t"-license
