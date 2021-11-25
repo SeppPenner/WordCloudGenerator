@@ -1,6 +1,5 @@
 # WordCloudGenerator
 WordCloudGenerator implementation in C#.
-The executable was written and tested in .Net 5.0.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/r8r6j98kri947g09?svg=true)](https://ci.appveyor.com/project/SeppPenner/wordcloudgenerator)
 [![GitHub issues](https://img.shields.io/github/issues/SeppPenner/WordCloudGenerator.svg)](https://github.com/SeppPenner/WordCloudGenerator/issues)
