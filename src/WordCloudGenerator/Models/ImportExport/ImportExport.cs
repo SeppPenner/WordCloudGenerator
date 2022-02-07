@@ -53,10 +53,10 @@ namespace WordCloudGenerator.Models.ImportExport
         /// <param name="filename">The file name.</param>
         /// <returns>A new <see cref="BlacklistModel"/>.</returns>
         /// <seealso cref="IImportExport"/>
-        public BlacklistModel LoadConfigFromXmlFile(string filename)
+        public BlacklistModel? LoadConfigFromXmlFile(string filename)
         {
             var xDocument = XDocument.Load(filename);
-            return CreateObjectsFromString<BlacklistModel>(xDocument);
+            return CreateObjectsFromString<BlacklistModel?>(xDocument);
         }
 
         /// <summary>
@@ -65,10 +65,10 @@ namespace WordCloudGenerator.Models.ImportExport
         /// <typeparam name="T">The type.</typeparam>
         /// <param name="xDocument">The X document.</param>
         /// <returns>A new object of type <see cref="T"/>.</returns>
-        private static T CreateObjectsFromString<T>(XDocument xDocument)
+        private static T? CreateObjectsFromString<T>(XDocument xDocument)
         {
             var xmlSerializer = new XmlSerializer(typeof(T));
-            return (T)xmlSerializer.Deserialize(new StringReader(xDocument.ToString()));
+            return (T?)xmlSerializer.Deserialize(new StringReader(xDocument.ToString()));
         }
     }
 }

@@ -41,7 +41,7 @@ namespace WordCloudGenerator.Models.WordCloud
         /// Gets or sets the text.
         /// </summary>
         /// <seealso cref="IWord"/>
-        public string Text { get; set; }
+        public string Text { get; set; } = string.Empty;
 
         /// <inheritdoc cref="IWord"/>
         /// <summary>

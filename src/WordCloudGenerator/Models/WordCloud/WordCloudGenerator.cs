@@ -46,7 +46,7 @@ namespace WordCloudGenerator.Models.WordCloud
         /// <summary>
         /// The worker.
         /// </summary>
-        private BackgroundWorker worker;
+        private BackgroundWorker worker = new();
 
         /// <summary>
         /// Gets or sets the background color.
@@ -91,7 +91,7 @@ namespace WordCloudGenerator.Models.WordCloud
         /// <summary>
         /// Gets or sets the file blacklist location.
         /// </summary>
-        public IFileBlackListLocation FileBlackListLocation { get; set; }
+        public IFileBlackListLocation FileBlackListLocation { get; set; } = new FileBlackListLocation();
 
         /// <summary>
         /// Gets or sets the layout type.
@@ -181,12 +181,12 @@ namespace WordCloudGenerator.Models.WordCloud
         /// </summary>
         /// <param name="words">The words.</param>
         /// <returns>A new <see cref="IMinMax"/>.</returns>
-        private static IMinMax CalculateMinMaxWordWeights(IEnumerable<global::WordCloudGenerator.Interfaces.WordCloud.IWord> words)
+        private static IMinMax? CalculateMinMaxWordWeights(IEnumerable<global::WordCloudGenerator.Interfaces.WordCloud.IWord> words)
         {
             var words2 = words.ToList();
             var first = words2[0];
 
-            if (first == null)
+            if (first is null)
             {
                 return null;
             }
@@ -218,7 +218,7 @@ namespace WordCloudGenerator.Models.WordCloud
         /// Gets the grouped files with case ignore.
         /// </summary>
         /// <param name="files">The files.</param>
-        /// <returns>A new <see cref="IEnumerable{T}"/> of <see cref="Interfaces.WordCloud.IWord"/>s.</returns>
+        /// <returns>A new <see cref="IEnumerable{T}"/> of <see cref="IWord"/>s.</returns>
         private static IEnumerable<global::WordCloudGenerator.Interfaces.WordCloud.IWord> GetGroupedFilesIgnoreCase(IEnumerable<string> files)
         {
             IFileReader reader = new FileReader();
@@ -269,7 +269,6 @@ namespace WordCloudGenerator.Models.WordCloud
         /// <param name="e">The event args.</param>
         private void GenerateCloud(object sender, DoWorkEventArgs e)
         {
-            // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
             switch (this.CompareType)
             {
                 case StringCompareType.IgnoreCase:
@@ -344,8 +343,8 @@ namespace WordCloudGenerator.Models.WordCloud
                 this.ColorPalette,
                 this.MinimumFontSize,
                 this.MaxFontSize,
-                minMax.Min,
-                minMax.Max);
+                minMax?.Min ?? 0,
+                minMax?.Max ?? 0);
             layout.Arrange(toDraw, graphicEngine);
             SaveFile(bitmap, saveImageLocation);
         }

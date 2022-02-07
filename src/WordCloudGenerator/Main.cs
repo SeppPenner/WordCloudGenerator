@@ -45,7 +45,7 @@ namespace WordCloudGenerator
         /// <summary>
         /// The blacklist model.
         /// </summary>
-        private BlacklistModel blacklistModel = new BlacklistModel();
+        private BlacklistModel blacklistModel = new();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Main"/> class.
@@ -83,7 +83,7 @@ namespace WordCloudGenerator
         /// </summary>
         private void InitializeCaption()
         {
-            this.Text = Application.ProductName + @" " + Application.ProductVersion;
+            this.Text = $"{Application.ProductName} {Application.ProductVersion}";
         }
 
         /// <summary>
@@ -99,8 +99,7 @@ namespace WordCloudGenerator
                 }
 
                 var importExport = new ImportExport();
-                this.blacklistModel =
-                    importExport.LoadConfigFromXmlFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Blacklist.xml"));
+                this.blacklistModel = importExport.LoadConfigFromXmlFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Blacklist.xml")) ?? new();
                 this.LoadDataToCombobox(this.blacklistModel);
             }
             catch (Exception ex)

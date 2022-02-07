@@ -25,20 +25,20 @@ namespace WordCloudGenerator.Models.TransferObjects
         /// Gets or sets the files.
         /// </summary>
         /// <seealso cref="IFileBlackListLocation"/>
-        public IEnumerable<string> Files { get; set; }
+        public IEnumerable<string> Files { get; set; } = new List<string>();
 
         /// <inheritdoc cref="IFileBlackListLocation"/>
         /// <summary>
         /// Gets or sets the blacklist.
         /// </summary>
         /// <seealso cref="IFileBlackListLocation"/>
-        public IEnumerable<string> Blacklist { get; set; }
+        public IEnumerable<string> Blacklist { get; set; } = new List<string>();
 
         /// <inheritdoc cref="IFileBlackListLocation"/>
         /// <summary>
         /// Gets or sets the save image location.
         /// </summary>
         /// <seealso cref="IFileBlackListLocation"/>
-        public string SaveImageLocation { get; set; }
+        public string SaveImageLocation { get; set; } = string.Empty;
     }
 }

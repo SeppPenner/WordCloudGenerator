@@ -21,6 +21,6 @@ namespace WordCloudGenerator.Models.ImportExport
         /// <summary>
         /// Gets or sets the blacklists.
         /// </summary>
-        public List<Blacklist> Blacklists { get; set; }
+        public List<Blacklist> Blacklists { get; set; } = new();
     }
 }

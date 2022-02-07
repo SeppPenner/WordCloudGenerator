@@ -20,6 +20,6 @@ namespace WordCloudGenerator.Models.ImportExport
         /// <summary>
         /// Gets or sets the item.
         /// </summary>
-        public string Item { get; set; }
+        public string Item { get; set; } = string.Empty;
     }
 }

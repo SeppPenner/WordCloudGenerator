@@ -22,7 +22,6 @@ namespace WordCloudGenerator.Interfaces.ImportExport
         /// <typeparam name="T">The type.</typeparam>
         /// <param name="items">The items.</param>
         /// <param name="fileName">The file name.</param>
-        // ReSharper disable once UnusedMemberInSuper.Global
         void WriteDataToXmlFile<T>(T items, string fileName);
 
         /// <summary>
@@ -30,7 +29,6 @@ namespace WordCloudGenerator.Interfaces.ImportExport
         /// </summary>
         /// <param name="filename">The file name.</param>
         /// <returns>A new <see cref="BlacklistModel"/>.</returns>
-        // ReSharper disable once UnusedMemberInSuper.Global
-        BlacklistModel LoadConfigFromXmlFile(string filename);
+        BlacklistModel? LoadConfigFromXmlFile(string filename);
     }
 }

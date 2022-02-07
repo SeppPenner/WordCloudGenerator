@@ -13,6 +13,7 @@ namespace WordCloudGenerator.Models.Layout
 
     using WordCloudGenerator.Interfaces.Layout;
     using WordCloudGenerator.Interfaces.WordCloud;
+    using WordCloudGenerator.Models.WordCloud;
 
     /// <inheritdoc cref="ILayoutItem"/>
     /// <summary>
@@ -51,7 +52,7 @@ namespace WordCloudGenerator.Models.Layout
         /// Gets or sets the word.
         /// </summary>
         /// <seealso cref="ILayoutItem"/>
-        public IWord Word { get; set; }
+        public IWord Word { get; set; } = new Word();
 
         /// <inheritdoc cref="ILayoutItem"/>
         /// <summary>

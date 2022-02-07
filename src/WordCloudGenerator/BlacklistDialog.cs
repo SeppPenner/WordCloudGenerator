@@ -101,21 +101,20 @@ namespace WordCloudGenerator
         /// <param name="row">The row.</param>
         private static void AddItemsToBlacklist(BlacklistModel model, DataGridViewRow row)
         {
-            if (row.Cells[0].Value == null)
+            if (row.Cells[0].Value is null)
             {
                 return;
             }
 
-            // ReSharper disable once ConvertIfStatementToNullCoalescingAssignment
-            if (model.Blacklists == null)
+            if (model.Blacklists is null)
             {
                 model.Blacklists = new List<Blacklist>();
             }
 
             var list = new Blacklist
             {
-                Name = row.Cells[0].Value.ToString(),
-                FilterList = GetListFromString(row.Cells[1].Value.ToString())
+                Name = row.Cells[0].Value.ToString() ?? string.Empty,
+                FilterList = GetListFromString(row.Cells[1].Value.ToString() ?? string.Empty)
             };
 
             model.Blacklists.Add(list);
@@ -223,8 +222,7 @@ namespace WordCloudGenerator
                 }
 
                 var importExport = new ImportExport();
-                var blacklistModel =
-                    importExport.LoadConfigFromXmlFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Blacklist.xml"));
+                var blacklistModel = importExport.LoadConfigFromXmlFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Blacklist.xml")) ?? new();
                 this.LoadDataToTable(blacklistModel);
             }
             catch (Exception ex)
