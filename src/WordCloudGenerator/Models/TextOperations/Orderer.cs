@@ -10,7 +10,6 @@
 namespace WordCloudGenerator.Models.TextOperations
 {
     using System.Collections.Generic;
-    using System.Diagnostics.CodeAnalysis;
     using System.Linq;
 
     using WordCloudGenerator.Interfaces.TextOperations;
@@ -21,7 +20,6 @@ namespace WordCloudGenerator.Models.TextOperations
     /// The orderer class.
     /// </summary>
     /// <seealso cref="IOrderer"/>
-    [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
     public class Orderer : IOrderer
     {
         /// <inheritdoc cref="IOrderer"/>

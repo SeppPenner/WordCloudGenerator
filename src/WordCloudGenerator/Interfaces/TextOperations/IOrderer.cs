@@ -9,14 +9,12 @@
 namespace WordCloudGenerator.Interfaces.TextOperations
 {
     using System.Collections.Generic;
-    using System.Diagnostics.CodeAnalysis;
 
     using WordCloudGenerator.Interfaces.WordCloud;
 
     /// <summary>
     /// The orderer interface.
     /// </summary>
-    [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
     public interface IOrderer
     {
         /// <summary>
