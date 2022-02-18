@@ -1,4 +1,4 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="StringCompareType.cs" company="Hämmer Electronics">
 //   Copyright (c) All rights reserved.
 // </copyright>
@@ -7,21 +7,20 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace WordCloudGenerator.Models.Enumerations
+namespace WordCloudGenerator.Models.Enumerations;
+
+/// <summary>
+/// The string compare type enumeration.
+/// </summary>
+public enum StringCompareType
 {
     /// <summary>
-    /// The string compare type enumeration.
+    /// The case sensitive string compare type.
     /// </summary>
-    public enum StringCompareType
-    {
-        /// <summary>
-        /// The case sensitive string compare type.
-        /// </summary>
-        CaseSensitive,
+    CaseSensitive,
 
-        /// <summary>
-        /// The ignore case string compare type.
-        /// </summary>
-        IgnoreCase
-    }
+    /// <summary>
+    /// The ignore case string compare type.
+    /// </summary>
+    IgnoreCase
 }

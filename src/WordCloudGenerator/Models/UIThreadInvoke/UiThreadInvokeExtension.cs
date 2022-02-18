@@ -1,4 +1,4 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="UiThreadInvokeExtension.cs" company="Hämmer Electronics">
 //   Copyright (c) All rights reserved.
 // </copyright>
@@ -7,32 +7,26 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace WordCloudGenerator.Models.UIThreadInvoke
+namespace WordCloudGenerator.Models.UIThreadInvoke;
+
+/// <summary>
+/// The UI thread invoke extensions.
+/// </summary>
+public static class UiThreadInvokeExtension
 {
-    using System;
-    using System.Windows.Forms;
-
     /// <summary>
-    /// The UI thread invoke extensions.
+    /// Invokes the UI thread from a background process.
     /// </summary>
-    // ReSharper disable once UnusedMember.Global
-    public static class UiThreadInvokeExtension
+    /// <param name="control">The control.</param>
+    /// <param name="code">The code.</param>
+    public static void UiThreadInvoke(this Control control, Action code)
     {
-        /// <summary>
-        /// Invokes the UI thread from a background process.
-        /// </summary>
-        /// <param name="control">The control.</param>
-        /// <param name="code">The code.</param>
-        // ReSharper disable once UnusedMember.Global
-        public static void UiThreadInvoke(this Control control, Action code)
+        if (control.InvokeRequired)
         {
-            if (control.InvokeRequired)
-            {
-                control.Invoke(code);
-                return;
-            }
-
-            code.Invoke();
+            control.Invoke(code);
+            return;
         }
+
+        code.Invoke();
     }
 }

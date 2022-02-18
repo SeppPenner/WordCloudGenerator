@@ -1,4 +1,4 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="IWord.cs" company="Hämmer Electronics">
 //   Copyright (c) All rights reserved.
 // </copyright>
@@ -7,21 +7,20 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace WordCloudGenerator.Interfaces.WordCloud
+namespace WordCloudGenerator.Interfaces.WordCloud;
+
+/// <summary>
+/// The word interface.
+/// </summary>
+public interface IWord
 {
     /// <summary>
-    /// The word interface.
+    /// Gets the text.
     /// </summary>
-    public interface IWord
-    {
-        /// <summary>
-        /// Gets the text.
-        /// </summary>
-        string Text { get; }
+    string Text { get; }
 
-        /// <summary>
-        /// Gets the occurrences.
-        /// </summary>
-        int Occurrences { get; }
-    }
+    /// <summary>
+    /// Gets the occurrences.
+    /// </summary>
+    int Occurrences { get; }
 }

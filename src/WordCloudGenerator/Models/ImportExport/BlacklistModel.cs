@@ -1,4 +1,4 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="BlacklistModel.cs" company="Hämmer Electronics">
 //   Copyright (c) All rights reserved.
 // </copyright>
@@ -7,20 +7,16 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace WordCloudGenerator.Models.ImportExport
-{
-    using System;
-    using System.Collections.Generic;
+namespace WordCloudGenerator.Models.ImportExport;
 
+/// <summary>
+/// The blacklist model.
+/// </summary>
+[Serializable]
+public class BlacklistModel
+{
     /// <summary>
-    /// The blacklist model.
+    /// Gets or sets the blacklists.
     /// </summary>
-    [Serializable]
-    public class BlacklistModel
-    {
-        /// <summary>
-        /// Gets or sets the blacklists.
-        /// </summary>
-        public List<Blacklist> Blacklists { get; set; } = new();
-    }
+    public List<Blacklist> Blacklists { get; set; } = new();
 }

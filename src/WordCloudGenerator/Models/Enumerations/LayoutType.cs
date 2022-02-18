@@ -1,4 +1,4 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="LayoutType.cs" company="Hämmer Electronics">
 //   Copyright (c) All rights reserved.
 // </copyright>
@@ -7,21 +7,20 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace WordCloudGenerator.Models.Enumerations
+namespace WordCloudGenerator.Models.Enumerations;
+
+/// <summary>
+/// The layout type.
+/// </summary>
+public enum LayoutType
 {
     /// <summary>
-    /// The layout type.
+    /// The spiral layout type.
     /// </summary>
-    public enum LayoutType
-    {
-        /// <summary>
-        /// The spiral layout type.
-        /// </summary>
-        Spiral,
+    Spiral,
 
-        /// <summary>
-        /// The type writer layout type.
-        /// </summary>
-        Typewriter
-    }
+    /// <summary>
+    /// The type writer layout type.
+    /// </summary>
+    Typewriter
 }

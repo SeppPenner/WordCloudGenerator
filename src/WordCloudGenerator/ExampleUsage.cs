@@ -21,16 +21,13 @@ namespace WordCloudGenerator
     /// <summary>
     /// The example usage class.
     /// </summary>
-    // ReSharper disable once UnusedMember.Global
     public class ExampleUsage
     {
         /// <summary>
         /// A test method.
         /// </summary>
-        // ReSharper disable once UnusedMember.Global
         public void Test()
         {
-            // ReSharper disable once UnusedVariable
             IFileBlackListLocation fileAndBlackList = new FileBlackListLocation
             {
                 Blacklist = new List<string> { "Test", "Test2" }, // Specify which words should be excluded
