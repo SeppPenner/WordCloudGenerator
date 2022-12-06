@@ -225,8 +225,8 @@ public class WordCloudGenerator : IWordCloudGenerator
     private void InitializeBackgroundWorker()
     {
         this.worker = new BackgroundWorker();
-        this.worker.DoWork += this.GenerateCloud;
-        this.worker.RunWorkerCompleted += this.GenerateCloudDone;
+        this.worker.DoWork += this.GenerateCloud!;
+        this.worker.RunWorkerCompleted += this.GenerateCloudDone!;
     }
 
     /// <summary>
