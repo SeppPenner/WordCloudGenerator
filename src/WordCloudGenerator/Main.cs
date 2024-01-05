@@ -240,7 +240,7 @@ public partial class Main : Form
     private IEnumerable<string> GetFilterList()
     {
         var filterList = new List<string>();
-        var blacklist = this.blacklistModel.Blacklists.Find(x => x.Name.Equals(this.comboBoxBlacklist.SelectedItem.ToString()));
+        var blacklist = this.blacklistModel.Blacklists.Find(x => x.Name.Equals(this.comboBoxBlacklist.SelectedItem?.ToString()));
 
         if (blacklist == null)
         {
@@ -280,7 +280,7 @@ public partial class Main : Form
     /// <param name="e">The event args.</param>
     private void ComboBoxLanguageSelectedIndexChanged(object sender, EventArgs e)
     {
-        var selectedItem = this.comboBoxLanguage.SelectedItem.ToString();
+        var selectedItem = this.comboBoxLanguage.SelectedItem?.ToString();
 
         if (string.IsNullOrWhiteSpace(selectedItem))
         {
