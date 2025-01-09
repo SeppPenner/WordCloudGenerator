@@ -95,13 +95,13 @@ public partial class BlacklistDialog : Form
 
         if (model.Blacklists is null)
         {
-            model.Blacklists = new List<Blacklist>();
+            model.Blacklists = [];
         }
 
         var list = new Blacklist
         {
-            Name = row.Cells[0].Value.ToString() ?? string.Empty,
-            FilterList = GetListFromString(row.Cells[1].Value.ToString() ?? string.Empty)
+            Name = row.Cells[0].Value?.ToString() ?? string.Empty,
+            FilterList = GetListFromString(row.Cells[1].Value?.ToString() ?? string.Empty)
         };
 
         model.Blacklists.Add(list);
